@@ -1,0 +1,493 @@
+# Logfile created on 2017-04-27 17:01:21 +0200 by logger.rb/56438
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-27 17:01:21 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [a69f6ba5] Running /usr/bin/env mkdir -p /tmp as vagrant@192.168.33.70
+ DEBUG [a69f6ba5] Command: /usr/bin/env mkdir -p /tmp
+  INFO [3570eff4] Running /usr/bin/env #<StringIO:0x37626d8> /tmp/git-ssh-mon_site_d8-production-mlahmidi.sh as vagrant@192.168.33.70
+ DEBUG [3570eff4] Command: /usr/bin/env #<StringIO:0x37626d8> /tmp/git-ssh-mon_site_d8-production-mlahmidi.sh
+  INFO [35b4da29] Running /usr/bin/env chmod 700 /tmp/git-ssh-mon_site_d8-production-mlahmidi.sh as vagrant@192.168.33.70
+ DEBUG [35b4da29] Command: /usr/bin/env chmod 700 /tmp/git-ssh-mon_site_d8-production-mlahmidi.sh
+  INFO [11358f79] Running /usr/bin/env git ls-remote git@github.com:majidlahmidi/d8.git HEAD as vagrant@192.168.33.70
+ DEBUG [11358f79] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-mon_site_d8-production-mlahmidi.sh" ; /usr/bin/env git ls-remote git@github.com:majidlahmidi/d8.git HEAD )
+  INFO [70fbfa70] Running /usr/bin/env mkdir -p /var/www/html/d8/shared /var/www/html/d8/releases as vagrant@192.168.33.70
+ DEBUG [70fbfa70] Command: /usr/bin/env mkdir -p /var/www/html/d8/shared /var/www/html/d8/releases
+ DEBUG [b6a2c69b] Running [ -f /var/www/html/d8/current/REVISION ] as vagrant@192.168.33.70
+ DEBUG [b6a2c69b] Command: [ -f /var/www/html/d8/current/REVISION ]
+ DEBUG [c92090b0] Running /usr/bin/env cat /var/www/html/d8/current/REVISION 2>/dev/null as vagrant@192.168.33.70
+ DEBUG [c92090b0] Command: /usr/bin/env cat /var/www/html/d8/current/REVISION 2>/dev/null
+ DEBUG [a7d4e79c] Running [ -f /var/www/html/d8/repo/HEAD ] as vagrant@192.168.33.70
+ DEBUG [a7d4e79c] Command: [ -f /var/www/html/d8/repo/HEAD ]
+  INFO The repository mirror is at /var/www/html/d8/repo
+ DEBUG [bc636386] Running if test ! -d /var/www/html/d8/repo; then echo "Directory does not exist '/var/www/html/d8/repo'" 1>&2; false; fi as vagrant@192.168.33.70
+ DEBUG [bc636386] Command: if test ! -d /var/www/html/d8/repo; then echo "Directory does not exist '/var/www/html/d8/repo'" 1>&2; false; fi
+  INFO [0bb8e21d] Running /usr/bin/env git remote set-url origin git@github.com:majidlahmidi/d8.git as vagrant@192.168.33.70
+ DEBUG [0bb8e21d] Command: cd /var/www/html/d8/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-mon_site_d8-production-mlahmidi.sh" ; /usr/bin/env git remote set-url origin git@github.com:majidlahmidi/d8.git )
+  INFO [6be19d9b] Running /usr/bin/env git remote update --prune as vagrant@192.168.33.70
+ DEBUG [6be19d9b] Command: cd /var/www/html/d8/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-mon_site_d8-production-mlahmidi.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [0e2878f3] Running if test ! -d /var/www/html/d8/repo; then echo "Directory does not exist '/var/www/html/d8/repo'" 1>&2; false; fi as vagrant@192.168.33.70
+ DEBUG [0e2878f3] Command: if test ! -d /var/www/html/d8/repo; then echo "Directory does not exist '/var/www/html/d8/repo'" 1>&2; false; fi
+  INFO [ae1c66e6] Running /usr/bin/env mkdir -p /var/www/html/d8/releases/20170427150121 as vagrant@192.168.33.70
+ DEBUG [ae1c66e6] Command: cd /var/www/html/d8/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-mon_site_d8-production-mlahmidi.sh" ; /usr/bin/env mkdir -p /var/www/html/d8/releases/20170427150121 )
+  INFO [16615094] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/html/d8/releases/20170427150121 as vagrant@192.168.33.70
+ DEBUG [16615094] Command: cd /var/www/html/d8/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-mon_site_d8-production-mlahmidi.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/html/d8/releases/20170427150121 )
+ DEBUG [97a119b5] Running if test ! -d /var/www/html/d8/repo; then echo "Directory does not exist '/var/www/html/d8/repo'" 1>&2; false; fi as vagrant@192.168.33.70
+ DEBUG [97a119b5] Command: if test ! -d /var/www/html/d8/repo; then echo "Directory does not exist '/var/www/html/d8/repo'" 1>&2; false; fi
+ DEBUG [42b01248] Running /usr/bin/env git rev-list --max-count=1 master as vagrant@192.168.33.70
+ DEBUG [42b01248] Command: cd /var/www/html/d8/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-mon_site_d8-production-mlahmidi.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [0f164c99] Running if test ! -d /var/www/html/d8/releases/20170427150121; then echo "Directory does not exist '/var/www/html/d8/releases/20170427150121'" 1>&2; false; fi as vagrant@192.168.33.70
+ DEBUG [0f164c99] Command: if test ! -d /var/www/html/d8/releases/20170427150121; then echo "Directory does not exist '/var/www/html/d8/releases/20170427150121'" 1>&2; false; fi
+  INFO [686cb450] Running /usr/bin/env echo "" >> REVISION as vagrant@192.168.33.70
+ DEBUG [686cb450] Command: cd /var/www/html/d8/releases/20170427150121 && /usr/bin/env echo "" >> REVISION
+  INFO [2088c522] Running /usr/bin/env ln -s /var/www/html/d8/releases/20170427150121 /var/www/html/d8/releases/current as vagrant@192.168.33.70
+ DEBUG [2088c522] Command: /usr/bin/env ln -s /var/www/html/d8/releases/20170427150121 /var/www/html/d8/releases/current
+  INFO [26fb2dea] Running /usr/bin/env mv /var/www/html/d8/releases/current /var/www/html/d8 as vagrant@192.168.33.70
+ DEBUG [26fb2dea] Command: /usr/bin/env mv /var/www/html/d8/releases/current /var/www/html/d8
+ DEBUG [f654372c] Running /usr/bin/env ls -x /var/www/html/d8/releases as vagrant@192.168.33.70
+ DEBUG [f654372c] Command: /usr/bin/env ls -x /var/www/html/d8/releases
+ DEBUG [3e92fb06] Running if test ! -d /var/www/html/d8/releases; then echo "Directory does not exist '/var/www/html/d8/releases'" 1>&2; false; fi as vagrant@192.168.33.70
+ DEBUG [3e92fb06] Command: if test ! -d /var/www/html/d8/releases; then echo "Directory does not exist '/var/www/html/d8/releases'" 1>&2; false; fi
+  INFO [7741245a] Running /usr/bin/env echo "Branch master (at ) deployed as release 20170427150121 by mlahmidi" >> /var/www/html/d8/revisions.log as vagrant@192.168.33.70
+ DEBUG [7741245a] Command: cd /var/www/html/d8/releases && /usr/bin/env echo "Branch master (at ) deployed as release 20170427150121 by mlahmidi" >> /var/www/html/d8/revisions.log
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-27 17:01:41 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [0045aa74] Running /usr/bin/env mkdir -p /tmp as vagrant@192.168.33.70
+ DEBUG [0045aa74] Command: /usr/bin/env mkdir -p /tmp
+  INFO [0045aa74] Finished in 1.485 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-mon_site_d8-production-mlahmidi.sh 0.0%
+  INFO Uploading /tmp/git-ssh-mon_site_d8-production-mlahmidi.sh 100.0%
+  INFO [0ff0d339] Running /usr/bin/env chmod 700 /tmp/git-ssh-mon_site_d8-production-mlahmidi.sh as vagrant@192.168.33.70
+ DEBUG [0ff0d339] Command: /usr/bin/env chmod 700 /tmp/git-ssh-mon_site_d8-production-mlahmidi.sh
+  INFO [0ff0d339] Finished in 0.022 seconds with exit status 0 (successful).
+  INFO [75e25fde] Running /usr/bin/env git ls-remote git@github.com:majidlahmidi/d8.git HEAD as vagrant@192.168.33.70
+ DEBUG [75e25fde] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-mon_site_d8-production-mlahmidi.sh" ; /usr/bin/env git ls-remote git@github.com:majidlahmidi/d8.git HEAD )
+ DEBUG [75e25fde] 	Warning: Permanently added 'github.com,192.30.253.112' (RSA) to the list of known hosts.
+ DEBUG [75e25fde] 	Error reading response length from authentication socket.
+ DEBUG [75e25fde] 	Permission denied (publickey).
+ DEBUG [75e25fde] 	fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-27 17:04:23 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [75fb6106] Running /usr/bin/env mkdir -p /tmp as vagrant@192.168.33.70
+ DEBUG [75fb6106] Command: /usr/bin/env mkdir -p /tmp
+  INFO [75fb6106] Finished in 1.455 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-mon_site_d8-production-mlahmidi.sh 0.0%
+  INFO Uploading /tmp/git-ssh-mon_site_d8-production-mlahmidi.sh 100.0%
+  INFO [a72057be] Running /usr/bin/env chmod 700 /tmp/git-ssh-mon_site_d8-production-mlahmidi.sh as vagrant@192.168.33.70
+ DEBUG [a72057be] Command: /usr/bin/env chmod 700 /tmp/git-ssh-mon_site_d8-production-mlahmidi.sh
+  INFO [a72057be] Finished in 0.022 seconds with exit status 0 (successful).
+  INFO [dfde6e9e] Running /usr/bin/env git ls-remote git@github.com:majidlahmidi/d8.git HEAD as vagrant@192.168.33.70
+ DEBUG [dfde6e9e] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-mon_site_d8-production-mlahmidi.sh" ; /usr/bin/env git ls-remote git@github.com:majidlahmidi/d8.git HEAD )
+ DEBUG [dfde6e9e] 	Error reading response length from authentication socket.
+ DEBUG [dfde6e9e] 	Permission denied (publickey).
+ DEBUG [dfde6e9e] 	fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-27 17:09:14 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [53370a16] Running /usr/bin/env mkdir -p /tmp as vagrant@192.168.33.70
+ DEBUG [53370a16] Command: /usr/bin/env mkdir -p /tmp
+  INFO [53370a16] Finished in 1.432 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-mon_site_d8-production-mlahmidi.sh 0.0%
+  INFO Uploading /tmp/git-ssh-mon_site_d8-production-mlahmidi.sh 100.0%
+  INFO [eb59930f] Running /usr/bin/env chmod 700 /tmp/git-ssh-mon_site_d8-production-mlahmidi.sh as vagrant@192.168.33.70
+ DEBUG [eb59930f] Command: /usr/bin/env chmod 700 /tmp/git-ssh-mon_site_d8-production-mlahmidi.sh
+  INFO [eb59930f] Finished in 0.022 seconds with exit status 0 (successful).
+  INFO [4c0ef9e6] Running /usr/bin/env git ls-remote git@github.com:majidlahmidi/d8.git HEAD as vagrant@192.168.33.70
+ DEBUG [4c0ef9e6] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-mon_site_d8-production-mlahmidi.sh" ; /usr/bin/env git ls-remote git@github.com:majidlahmidi/d8.git HEAD )
+ DEBUG [4c0ef9e6] 	Error reading response length from authentication socket.
+ DEBUG [4c0ef9e6] 	c257228a3e1959e3ea8e3207cd18b1af4497ed5b	HEAD
+  INFO [4c0ef9e6] Finished in 1.436 seconds with exit status 0 (successful).
+  INFO [523c1e97] Running /usr/bin/env mkdir -p /var/www/html/d8/shared /var/www/html/d8/releases as vagrant@192.168.33.70
+ DEBUG [523c1e97] Command: /usr/bin/env mkdir -p /var/www/html/d8/shared /var/www/html/d8/releases
+  INFO [523c1e97] Finished in 0.022 seconds with exit status 0 (successful).
+ DEBUG [189983fc] Running [ -f /var/www/html/d8/current/REVISION ] as vagrant@192.168.33.70
+ DEBUG [189983fc] Command: [ -f /var/www/html/d8/current/REVISION ]
+ DEBUG [189983fc] Finished in 0.022 seconds with exit status 1 (failed).
+ DEBUG [08d618e6] Running [ -f /var/www/html/d8/repo/HEAD ] as vagrant@192.168.33.70
+ DEBUG [08d618e6] Command: [ -f /var/www/html/d8/repo/HEAD ]
+ DEBUG [08d618e6] Finished in 0.023 seconds with exit status 1 (failed).
+ DEBUG [d1499a0d] Running if test ! -d /var/www/html/d8; then echo "Directory does not exist '/var/www/html/d8'" 1>&2; false; fi as vagrant@192.168.33.70
+ DEBUG [d1499a0d] Command: if test ! -d /var/www/html/d8; then echo "Directory does not exist '/var/www/html/d8'" 1>&2; false; fi
+ DEBUG [d1499a0d] Finished in 0.022 seconds with exit status 0 (successful).
+  INFO [8198e772] Running /usr/bin/env git clone --mirror git@github.com:majidlahmidi/d8.git /var/www/html/d8/repo as vagrant@192.168.33.70
+ DEBUG [8198e772] Command: cd /var/www/html/d8 && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-mon_site_d8-production-mlahmidi.sh" ; /usr/bin/env git clone --mirror git@github.com:majidlahmidi/d8.git /var/www/html/d8/repo )
+ DEBUG [8198e772] 	Cloning into bare repository '/var/www/html/d8/repo'...
+ DEBUG [8198e772] 	Error reading response length from authentication socket.
+  INFO [8198e772] Finished in 26.641 seconds with exit status 0 (successful).
+ DEBUG [33956457] Running if test ! -d /var/www/html/d8/repo; then echo "Directory does not exist '/var/www/html/d8/repo'" 1>&2; false; fi as vagrant@192.168.33.70
+ DEBUG [33956457] Command: if test ! -d /var/www/html/d8/repo; then echo "Directory does not exist '/var/www/html/d8/repo'" 1>&2; false; fi
+ DEBUG [33956457] Finished in 0.022 seconds with exit status 0 (successful).
+  INFO [4b76fef8] Running /usr/bin/env git remote set-url origin git@github.com:majidlahmidi/d8.git as vagrant@192.168.33.70
+ DEBUG [4b76fef8] Command: cd /var/www/html/d8/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-mon_site_d8-production-mlahmidi.sh" ; /usr/bin/env git remote set-url origin git@github.com:majidlahmidi/d8.git )
+  INFO [4b76fef8] Finished in 0.054 seconds with exit status 0 (successful).
+  INFO [8d19ff99] Running /usr/bin/env git remote update --prune as vagrant@192.168.33.70
+ DEBUG [8d19ff99] Command: cd /var/www/html/d8/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-mon_site_d8-production-mlahmidi.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [8d19ff99] 	Fetching origin
+ DEBUG [8d19ff99] 	Error reading response length from authentication socket.
+  INFO [8d19ff99] Finished in 1.593 seconds with exit status 0 (successful).
+ DEBUG [1262445e] Running if test ! -d /var/www/html/d8/repo; then echo "Directory does not exist '/var/www/html/d8/repo'" 1>&2; false; fi as vagrant@192.168.33.70
+ DEBUG [1262445e] Command: if test ! -d /var/www/html/d8/repo; then echo "Directory does not exist '/var/www/html/d8/repo'" 1>&2; false; fi
+ DEBUG [1262445e] Finished in 0.022 seconds with exit status 0 (successful).
+  INFO [cd5f9d84] Running /usr/bin/env mkdir -p /var/www/html/d8/releases/20170427150917 as vagrant@192.168.33.70
+ DEBUG [cd5f9d84] Command: cd /var/www/html/d8/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-mon_site_d8-production-mlahmidi.sh" ; /usr/bin/env mkdir -p /var/www/html/d8/releases/20170427150917 )
+  INFO [cd5f9d84] Finished in 0.024 seconds with exit status 0 (successful).
+  INFO [30a29c1b] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/html/d8/releases/20170427150917 as vagrant@192.168.33.70
+ DEBUG [30a29c1b] Command: cd /var/www/html/d8/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-mon_site_d8-production-mlahmidi.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/html/d8/releases/20170427150917 )
+  INFO [30a29c1b] Finished in 0.750 seconds with exit status 0 (successful).
+ DEBUG [2b8f8c35] Running if test ! -d /var/www/html/d8/repo; then echo "Directory does not exist '/var/www/html/d8/repo'" 1>&2; false; fi as vagrant@192.168.33.70
+ DEBUG [2b8f8c35] Command: if test ! -d /var/www/html/d8/repo; then echo "Directory does not exist '/var/www/html/d8/repo'" 1>&2; false; fi
+ DEBUG [2b8f8c35] Finished in 0.023 seconds with exit status 0 (successful).
+ DEBUG [fc2a9576] Running /usr/bin/env git rev-list --max-count=1 master as vagrant@192.168.33.70
+ DEBUG [fc2a9576] Command: cd /var/www/html/d8/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-mon_site_d8-production-mlahmidi.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [fc2a9576] 	c257228a3e1959e3ea8e3207cd18b1af4497ed5b
+ DEBUG [fc2a9576] Finished in 0.023 seconds with exit status 0 (successful).
+ DEBUG [81b3888c] Running if test ! -d /var/www/html/d8/releases/20170427150917; then echo "Directory does not exist '/var/www/html/d8/releases/20170427150917'" 1>&2; false; fi as vagrant@192.168.33.70
+ DEBUG [81b3888c] Command: if test ! -d /var/www/html/d8/releases/20170427150917; then echo "Directory does not exist '/var/www/html/d8/releases/20170427150917'" 1>&2; false; fi
+ DEBUG [81b3888c] Finished in 0.022 seconds with exit status 0 (successful).
+  INFO [067ed20c] Running /usr/bin/env echo "c257228a3e1959e3ea8e3207cd18b1af4497ed5b" >> REVISION as vagrant@192.168.33.70
+ DEBUG [067ed20c] Command: cd /var/www/html/d8/releases/20170427150917 && /usr/bin/env echo "c257228a3e1959e3ea8e3207cd18b1af4497ed5b" >> REVISION
+  INFO [067ed20c] Finished in 0.022 seconds with exit status 0 (successful).
+  INFO [026ae32e] Running /usr/bin/env ln -s /var/www/html/d8/releases/20170427150917 /var/www/html/d8/releases/current as vagrant@192.168.33.70
+ DEBUG [026ae32e] Command: /usr/bin/env ln -s /var/www/html/d8/releases/20170427150917 /var/www/html/d8/releases/current
+  INFO [026ae32e] Finished in 0.023 seconds with exit status 0 (successful).
+  INFO [ddc6e231] Running /usr/bin/env mv /var/www/html/d8/releases/current /var/www/html/d8 as vagrant@192.168.33.70
+ DEBUG [ddc6e231] Command: /usr/bin/env mv /var/www/html/d8/releases/current /var/www/html/d8
+  INFO [ddc6e231] Finished in 0.023 seconds with exit status 0 (successful).
+ DEBUG [cd0b0f09] Running /usr/bin/env ls -x /var/www/html/d8/releases as vagrant@192.168.33.70
+ DEBUG [cd0b0f09] Command: /usr/bin/env ls -x /var/www/html/d8/releases
+ DEBUG [cd0b0f09] 	20170427150917
+ DEBUG [cd0b0f09] Finished in 0.023 seconds with exit status 0 (successful).
+ DEBUG [68c78d28] Running if test ! -d /var/www/html/d8/releases; then echo "Directory does not exist '/var/www/html/d8/releases'" 1>&2; false; fi as vagrant@192.168.33.70
+ DEBUG [68c78d28] Command: if test ! -d /var/www/html/d8/releases; then echo "Directory does not exist '/var/www/html/d8/releases'" 1>&2; false; fi
+ DEBUG [68c78d28] Finished in 0.023 seconds with exit status 0 (successful).
+  INFO [acd58575] Running /usr/bin/env echo "Branch master (at c257228a3e1959e3ea8e3207cd18b1af4497ed5b) deployed as release 20170427150917 by mlahmidi" >> /var/www/html/d8/revisions.log as vagrant@192.168.33.70
+ DEBUG [acd58575] Command: cd /var/www/html/d8/releases && /usr/bin/env echo "Branch master (at c257228a3e1959e3ea8e3207cd18b1af4497ed5b) deployed as release 20170427150917 by mlahmidi" >> /var/www/html/d8/revisions.log
+  INFO [acd58575] Finished in 0.022 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-27 18:54:15 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [2349f33f] Running /usr/bin/env mkdir -p /tmp as vagrant@192.168.33.70
+ DEBUG [2349f33f] Command: /usr/bin/env mkdir -p /tmp
+  INFO [cb419b96] Running /usr/bin/env #<StringIO:0x37a9328> /tmp/git-ssh-mon_site_d8-production-mlahmidi.sh as vagrant@192.168.33.70
+ DEBUG [cb419b96] Command: /usr/bin/env #<StringIO:0x37a9328> /tmp/git-ssh-mon_site_d8-production-mlahmidi.sh
+  INFO [cf3d58ff] Running /usr/bin/env chmod 700 /tmp/git-ssh-mon_site_d8-production-mlahmidi.sh as vagrant@192.168.33.70
+ DEBUG [cf3d58ff] Command: /usr/bin/env chmod 700 /tmp/git-ssh-mon_site_d8-production-mlahmidi.sh
+  INFO [b8bfdf26] Running /usr/bin/env git ls-remote git@github.com:majidlahmidi/d8.git HEAD as vagrant@192.168.33.70
+ DEBUG [b8bfdf26] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-mon_site_d8-production-mlahmidi.sh" ; /usr/bin/env git ls-remote git@github.com:majidlahmidi/d8.git HEAD )
+  INFO [6d0ade69] Running /usr/bin/env mkdir -p /var/www/html/d8/shared /var/www/html/d8/releases as vagrant@192.168.33.70
+ DEBUG [6d0ade69] Command: /usr/bin/env mkdir -p /var/www/html/d8/shared /var/www/html/d8/releases
+  INFO [0c54876f] Running /usr/bin/env mkdir -p /var/www/html/d8/shared/sites/default/files as vagrant@192.168.33.70
+ DEBUG [0c54876f] Command: /usr/bin/env mkdir -p /var/www/html/d8/shared/sites/default/files
+  INFO [5786f9db] Running /usr/bin/env mkdir -p /var/www/html/d8/shared/sites/default as vagrant@192.168.33.70
+ DEBUG [5786f9db] Command: /usr/bin/env mkdir -p /var/www/html/d8/shared/sites/default
+ DEBUG [36021397] Running [ -f /var/www/html/d8/shared/sites/default/settings.php ] as vagrant@192.168.33.70
+ DEBUG [36021397] Command: [ -f /var/www/html/d8/shared/sites/default/settings.php ]
+ DEBUG [30a930ef] Running [ -f /var/www/html/d8/shared/sites/default/services.yml ] as vagrant@192.168.33.70
+ DEBUG [30a930ef] Command: [ -f /var/www/html/d8/shared/sites/default/services.yml ]
+ DEBUG [3f3af318] Running [ -f /var/www/html/d8/current/REVISION ] as vagrant@192.168.33.70
+ DEBUG [3f3af318] Command: [ -f /var/www/html/d8/current/REVISION ]
+ DEBUG [96d150d4] Running /usr/bin/env cat /var/www/html/d8/current/REVISION 2>/dev/null as vagrant@192.168.33.70
+ DEBUG [96d150d4] Command: /usr/bin/env cat /var/www/html/d8/current/REVISION 2>/dev/null
+ DEBUG [6d16a10b] Running [ -f /var/www/html/d8/repo/HEAD ] as vagrant@192.168.33.70
+ DEBUG [6d16a10b] Command: [ -f /var/www/html/d8/repo/HEAD ]
+  INFO The repository mirror is at /var/www/html/d8/repo
+ DEBUG [581e2794] Running if test ! -d /var/www/html/d8/repo; then echo "Directory does not exist '/var/www/html/d8/repo'" 1>&2; false; fi as vagrant@192.168.33.70
+ DEBUG [581e2794] Command: if test ! -d /var/www/html/d8/repo; then echo "Directory does not exist '/var/www/html/d8/repo'" 1>&2; false; fi
+  INFO [c1556cba] Running /usr/bin/env git remote set-url origin git@github.com:majidlahmidi/d8.git as vagrant@192.168.33.70
+ DEBUG [c1556cba] Command: cd /var/www/html/d8/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-mon_site_d8-production-mlahmidi.sh" ; /usr/bin/env git remote set-url origin git@github.com:majidlahmidi/d8.git )
+  INFO [a768cd62] Running /usr/bin/env git remote update --prune as vagrant@192.168.33.70
+ DEBUG [a768cd62] Command: cd /var/www/html/d8/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-mon_site_d8-production-mlahmidi.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [2d0a4490] Running if test ! -d /var/www/html/d8/repo; then echo "Directory does not exist '/var/www/html/d8/repo'" 1>&2; false; fi as vagrant@192.168.33.70
+ DEBUG [2d0a4490] Command: if test ! -d /var/www/html/d8/repo; then echo "Directory does not exist '/var/www/html/d8/repo'" 1>&2; false; fi
+  INFO [122a2819] Running /usr/bin/env mkdir -p /var/www/html/d8/releases/20170427165415 as vagrant@192.168.33.70
+ DEBUG [122a2819] Command: cd /var/www/html/d8/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-mon_site_d8-production-mlahmidi.sh" ; /usr/bin/env mkdir -p /var/www/html/d8/releases/20170427165415 )
+  INFO [8b5d0dcd] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/html/d8/releases/20170427165415 as vagrant@192.168.33.70
+ DEBUG [8b5d0dcd] Command: cd /var/www/html/d8/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-mon_site_d8-production-mlahmidi.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/html/d8/releases/20170427165415 )
+ DEBUG [42e37c6f] Running if test ! -d /var/www/html/d8/repo; then echo "Directory does not exist '/var/www/html/d8/repo'" 1>&2; false; fi as vagrant@192.168.33.70
+ DEBUG [42e37c6f] Command: if test ! -d /var/www/html/d8/repo; then echo "Directory does not exist '/var/www/html/d8/repo'" 1>&2; false; fi
+ DEBUG [3524de02] Running /usr/bin/env git rev-list --max-count=1 master as vagrant@192.168.33.70
+ DEBUG [3524de02] Command: cd /var/www/html/d8/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-mon_site_d8-production-mlahmidi.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [51422e39] Running if test ! -d /var/www/html/d8/releases/20170427165415; then echo "Directory does not exist '/var/www/html/d8/releases/20170427165415'" 1>&2; false; fi as vagrant@192.168.33.70
+ DEBUG [51422e39] Command: if test ! -d /var/www/html/d8/releases/20170427165415; then echo "Directory does not exist '/var/www/html/d8/releases/20170427165415'" 1>&2; false; fi
+  INFO [094bb7a6] Running /usr/bin/env echo "" >> REVISION as vagrant@192.168.33.70
+ DEBUG [094bb7a6] Command: cd /var/www/html/d8/releases/20170427165415 && /usr/bin/env echo "" >> REVISION
+  INFO [c5f09b3f] Running /usr/bin/env mkdir -p /var/www/html/d8/releases/20170427165415/sites/default as vagrant@192.168.33.70
+ DEBUG [c5f09b3f] Command: /usr/bin/env mkdir -p /var/www/html/d8/releases/20170427165415/sites/default
+ DEBUG [c9e65be5] Running [ -L /var/www/html/d8/releases/20170427165415/sites/default/settings.php ] as vagrant@192.168.33.70
+ DEBUG [c9e65be5] Command: [ -L /var/www/html/d8/releases/20170427165415/sites/default/settings.php ]
+ DEBUG [a5afe9f8] Running [ -L /var/www/html/d8/releases/20170427165415/sites/default/services.yml ] as vagrant@192.168.33.70
+ DEBUG [a5afe9f8] Command: [ -L /var/www/html/d8/releases/20170427165415/sites/default/services.yml ]
+  INFO [ca447467] Running /usr/bin/env mkdir -p /var/www/html/d8/releases/20170427165415/sites/default as vagrant@192.168.33.70
+ DEBUG [ca447467] Command: /usr/bin/env mkdir -p /var/www/html/d8/releases/20170427165415/sites/default
+ DEBUG [82a8aa07] Running [ -L /var/www/html/d8/releases/20170427165415/sites/default/files ] as vagrant@192.168.33.70
+ DEBUG [82a8aa07] Command: [ -L /var/www/html/d8/releases/20170427165415/sites/default/files ]
+  INFO [b37f76c9] Running /usr/bin/env ln -s /var/www/html/d8/releases/20170427165415 /var/www/html/d8/releases/current as vagrant@192.168.33.70
+ DEBUG [b37f76c9] Command: /usr/bin/env ln -s /var/www/html/d8/releases/20170427165415 /var/www/html/d8/releases/current
+  INFO [a9786bdc] Running /usr/bin/env mv /var/www/html/d8/releases/current /var/www/html/d8 as vagrant@192.168.33.70
+ DEBUG [a9786bdc] Command: /usr/bin/env mv /var/www/html/d8/releases/current /var/www/html/d8
+ DEBUG [635938c0] Running /usr/bin/env ls -x /var/www/html/d8/releases as vagrant@192.168.33.70
+ DEBUG [635938c0] Command: /usr/bin/env ls -x /var/www/html/d8/releases
+ DEBUG [964330de] Running if test ! -d /var/www/html/d8/releases; then echo "Directory does not exist '/var/www/html/d8/releases'" 1>&2; false; fi as vagrant@192.168.33.70
+ DEBUG [964330de] Command: if test ! -d /var/www/html/d8/releases; then echo "Directory does not exist '/var/www/html/d8/releases'" 1>&2; false; fi
+  INFO [86b3af19] Running /usr/bin/env echo "Branch master (at ) deployed as release 20170427165415 by mlahmidi" >> /var/www/html/d8/revisions.log as vagrant@192.168.33.70
+ DEBUG [86b3af19] Command: cd /var/www/html/d8/releases && /usr/bin/env echo "Branch master (at ) deployed as release 20170427165415 by mlahmidi" >> /var/www/html/d8/revisions.log
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-27 18:54:41 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [a29e04a9] Running /usr/bin/env mkdir -p /tmp as vagrant@192.168.33.70
+ DEBUG [a29e04a9] Command: /usr/bin/env mkdir -p /tmp
+  INFO [a29e04a9] Finished in 1.654 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-mon_site_d8-production-mlahmidi.sh 0.0%
+  INFO Uploading /tmp/git-ssh-mon_site_d8-production-mlahmidi.sh 100.0%
+  INFO [9fabe452] Running /usr/bin/env chmod 700 /tmp/git-ssh-mon_site_d8-production-mlahmidi.sh as vagrant@192.168.33.70
+ DEBUG [9fabe452] Command: /usr/bin/env chmod 700 /tmp/git-ssh-mon_site_d8-production-mlahmidi.sh
+  INFO [9fabe452] Finished in 0.024 seconds with exit status 0 (successful).
+  INFO [ad488dea] Running /usr/bin/env git ls-remote git@github.com:majidlahmidi/d8.git HEAD as vagrant@192.168.33.70
+ DEBUG [ad488dea] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-mon_site_d8-production-mlahmidi.sh" ; /usr/bin/env git ls-remote git@github.com:majidlahmidi/d8.git HEAD )
+ DEBUG [ad488dea] 	Error reading response length from authentication socket.
+ DEBUG [ad488dea] 	421ce8251767180b228e61a70b121fcec9b9abca	HEAD
+  INFO [ad488dea] Finished in 1.552 seconds with exit status 0 (successful).
+  INFO [1aeeca66] Running /usr/bin/env mkdir -p /var/www/html/d8/shared /var/www/html/d8/releases as vagrant@192.168.33.70
+ DEBUG [1aeeca66] Command: /usr/bin/env mkdir -p /var/www/html/d8/shared /var/www/html/d8/releases
+  INFO [1aeeca66] Finished in 0.024 seconds with exit status 0 (successful).
+  INFO [9f841e5b] Running /usr/bin/env mkdir -p /var/www/html/d8/shared/sites/default/files as vagrant@192.168.33.70
+ DEBUG [9f841e5b] Command: /usr/bin/env mkdir -p /var/www/html/d8/shared/sites/default/files
+  INFO [9f841e5b] Finished in 0.022 seconds with exit status 0 (successful).
+  INFO [a524de0e] Running /usr/bin/env mkdir -p /var/www/html/d8/shared/sites/default as vagrant@192.168.33.70
+ DEBUG [a524de0e] Command: /usr/bin/env mkdir -p /var/www/html/d8/shared/sites/default
+  INFO [a524de0e] Finished in 0.022 seconds with exit status 0 (successful).
+ DEBUG [4a469351] Running [ -f /var/www/html/d8/shared/sites/default/settings.php ] as vagrant@192.168.33.70
+ DEBUG [4a469351] Command: [ -f /var/www/html/d8/shared/sites/default/settings.php ]
+ DEBUG [4a469351] Finished in 0.023 seconds with exit status 0 (successful).
+ DEBUG [77363b4c] Running [ -f /var/www/html/d8/shared/sites/default/services.yml ] as vagrant@192.168.33.70
+ DEBUG [77363b4c] Command: [ -f /var/www/html/d8/shared/sites/default/services.yml ]
+ DEBUG [77363b4c] Finished in 0.023 seconds with exit status 0 (successful).
+ DEBUG [80e9dcc1] Running [ -f /var/www/html/d8/current/REVISION ] as vagrant@192.168.33.70
+ DEBUG [80e9dcc1] Command: [ -f /var/www/html/d8/current/REVISION ]
+ DEBUG [80e9dcc1] Finished in 0.022 seconds with exit status 0 (successful).
+ DEBUG [03b60121] Running /usr/bin/env cat /var/www/html/d8/current/REVISION 2>/dev/null as vagrant@192.168.33.70
+ DEBUG [03b60121] Command: /usr/bin/env cat /var/www/html/d8/current/REVISION 2>/dev/null
+ DEBUG [03b60121] 	c257228a3e1959e3ea8e3207cd18b1af4497ed5b
+ DEBUG [03b60121] Finished in 0.023 seconds with exit status 0 (successful).
+ DEBUG [8ecd11ab] Running [ -f /var/www/html/d8/repo/HEAD ] as vagrant@192.168.33.70
+ DEBUG [8ecd11ab] Command: [ -f /var/www/html/d8/repo/HEAD ]
+ DEBUG [8ecd11ab] Finished in 0.024 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/html/d8/repo
+ DEBUG [dd4b5a58] Running if test ! -d /var/www/html/d8/repo; then echo "Directory does not exist '/var/www/html/d8/repo'" 1>&2; false; fi as vagrant@192.168.33.70
+ DEBUG [dd4b5a58] Command: if test ! -d /var/www/html/d8/repo; then echo "Directory does not exist '/var/www/html/d8/repo'" 1>&2; false; fi
+ DEBUG [dd4b5a58] Finished in 0.022 seconds with exit status 0 (successful).
+  INFO [4252e7fb] Running /usr/bin/env git remote set-url origin git@github.com:majidlahmidi/d8.git as vagrant@192.168.33.70
+ DEBUG [4252e7fb] Command: cd /var/www/html/d8/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-mon_site_d8-production-mlahmidi.sh" ; /usr/bin/env git remote set-url origin git@github.com:majidlahmidi/d8.git )
+  INFO [4252e7fb] Finished in 0.026 seconds with exit status 0 (successful).
+  INFO [534e4e89] Running /usr/bin/env git remote update --prune as vagrant@192.168.33.70
+ DEBUG [534e4e89] Command: cd /var/www/html/d8/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-mon_site_d8-production-mlahmidi.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [534e4e89] 	Fetching origin
+ DEBUG [534e4e89] 	Warning: Permanently added the RSA host key for IP address '192.30.253.113' to the list of known hosts.
+ DEBUG [534e4e89] 	Error reading response length from authentication socket.
+ DEBUG [534e4e89] 	From github.com:majidlahmidi/d8
+   c257228..421ce82  master     -> master
+  INFO [534e4e89] Finished in 9.929 seconds with exit status 0 (successful).
+ DEBUG [08e1301e] Running if test ! -d /var/www/html/d8/repo; then echo "Directory does not exist '/var/www/html/d8/repo'" 1>&2; false; fi as vagrant@192.168.33.70
+ DEBUG [08e1301e] Command: if test ! -d /var/www/html/d8/repo; then echo "Directory does not exist '/var/www/html/d8/repo'" 1>&2; false; fi
+ DEBUG [08e1301e] Finished in 0.022 seconds with exit status 0 (successful).
+  INFO [7cba4969] Running /usr/bin/env mkdir -p /var/www/html/d8/releases/20170427165444 as vagrant@192.168.33.70
+ DEBUG [7cba4969] Command: cd /var/www/html/d8/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-mon_site_d8-production-mlahmidi.sh" ; /usr/bin/env mkdir -p /var/www/html/d8/releases/20170427165444 )
+  INFO [7cba4969] Finished in 0.022 seconds with exit status 0 (successful).
+  INFO [fcb6b3c4] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/html/d8/releases/20170427165444 as vagrant@192.168.33.70
+ DEBUG [fcb6b3c4] Command: cd /var/www/html/d8/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-mon_site_d8-production-mlahmidi.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/html/d8/releases/20170427165444 )
+  INFO [fcb6b3c4] Finished in 1.330 seconds with exit status 0 (successful).
+ DEBUG [19a33a64] Running if test ! -d /var/www/html/d8/repo; then echo "Directory does not exist '/var/www/html/d8/repo'" 1>&2; false; fi as vagrant@192.168.33.70
+ DEBUG [19a33a64] Command: if test ! -d /var/www/html/d8/repo; then echo "Directory does not exist '/var/www/html/d8/repo'" 1>&2; false; fi
+ DEBUG [19a33a64] Finished in 0.023 seconds with exit status 0 (successful).
+ DEBUG [dfc9a7d7] Running /usr/bin/env git rev-list --max-count=1 master as vagrant@192.168.33.70
+ DEBUG [dfc9a7d7] Command: cd /var/www/html/d8/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-mon_site_d8-production-mlahmidi.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [dfc9a7d7] 	421ce8251767180b228e61a70b121fcec9b9abca
+ DEBUG [dfc9a7d7] Finished in 0.024 seconds with exit status 0 (successful).
+ DEBUG [045669d3] Running if test ! -d /var/www/html/d8/releases/20170427165444; then echo "Directory does not exist '/var/www/html/d8/releases/20170427165444'" 1>&2; false; fi as vagrant@192.168.33.70
+ DEBUG [045669d3] Command: if test ! -d /var/www/html/d8/releases/20170427165444; then echo "Directory does not exist '/var/www/html/d8/releases/20170427165444'" 1>&2; false; fi
+ DEBUG [045669d3] Finished in 0.024 seconds with exit status 0 (successful).
+  INFO [e1605fda] Running /usr/bin/env echo "421ce8251767180b228e61a70b121fcec9b9abca" >> REVISION as vagrant@192.168.33.70
+ DEBUG [e1605fda] Command: cd /var/www/html/d8/releases/20170427165444 && /usr/bin/env echo "421ce8251767180b228e61a70b121fcec9b9abca" >> REVISION
+  INFO [e1605fda] Finished in 0.024 seconds with exit status 0 (successful).
+  INFO [10ec5178] Running /usr/bin/env mkdir -p /var/www/html/d8/releases/20170427165444/sites/default as vagrant@192.168.33.70
+ DEBUG [10ec5178] Command: /usr/bin/env mkdir -p /var/www/html/d8/releases/20170427165444/sites/default
+  INFO [10ec5178] Finished in 0.024 seconds with exit status 0 (successful).
+ DEBUG [1694589e] Running [ -L /var/www/html/d8/releases/20170427165444/sites/default/settings.php ] as vagrant@192.168.33.70
+ DEBUG [1694589e] Command: [ -L /var/www/html/d8/releases/20170427165444/sites/default/settings.php ]
+ DEBUG [1694589e] Finished in 0.024 seconds with exit status 1 (failed).
+ DEBUG [3aa1b100] Running [ -f /var/www/html/d8/releases/20170427165444/sites/default/settings.php ] as vagrant@192.168.33.70
+ DEBUG [3aa1b100] Command: [ -f /var/www/html/d8/releases/20170427165444/sites/default/settings.php ]
+ DEBUG [3aa1b100] Finished in 0.023 seconds with exit status 1 (failed).
+  INFO [bcb1ec64] Running /usr/bin/env ln -s /var/www/html/d8/shared/sites/default/settings.php /var/www/html/d8/releases/20170427165444/sites/default/settings.php as vagrant@192.168.33.70
+ DEBUG [bcb1ec64] Command: /usr/bin/env ln -s /var/www/html/d8/shared/sites/default/settings.php /var/www/html/d8/releases/20170427165444/sites/default/settings.php
+  INFO [bcb1ec64] Finished in 0.022 seconds with exit status 0 (successful).
+ DEBUG [8a2bd0a3] Running [ -L /var/www/html/d8/releases/20170427165444/sites/default/services.yml ] as vagrant@192.168.33.70
+ DEBUG [8a2bd0a3] Command: [ -L /var/www/html/d8/releases/20170427165444/sites/default/services.yml ]
+ DEBUG [8a2bd0a3] Finished in 0.023 seconds with exit status 1 (failed).
+ DEBUG [df655571] Running [ -f /var/www/html/d8/releases/20170427165444/sites/default/services.yml ] as vagrant@192.168.33.70
+ DEBUG [df655571] Command: [ -f /var/www/html/d8/releases/20170427165444/sites/default/services.yml ]
+ DEBUG [df655571] Finished in 0.023 seconds with exit status 1 (failed).
+  INFO [3054565e] Running /usr/bin/env ln -s /var/www/html/d8/shared/sites/default/services.yml /var/www/html/d8/releases/20170427165444/sites/default/services.yml as vagrant@192.168.33.70
+ DEBUG [3054565e] Command: /usr/bin/env ln -s /var/www/html/d8/shared/sites/default/services.yml /var/www/html/d8/releases/20170427165444/sites/default/services.yml
+  INFO [3054565e] Finished in 0.025 seconds with exit status 0 (successful).
+  INFO [32c77ebd] Running /usr/bin/env mkdir -p /var/www/html/d8/releases/20170427165444/sites/default as vagrant@192.168.33.70
+ DEBUG [32c77ebd] Command: /usr/bin/env mkdir -p /var/www/html/d8/releases/20170427165444/sites/default
+  INFO [32c77ebd] Finished in 0.022 seconds with exit status 0 (successful).
+ DEBUG [9fc64342] Running [ -L /var/www/html/d8/releases/20170427165444/sites/default/files ] as vagrant@192.168.33.70
+ DEBUG [9fc64342] Command: [ -L /var/www/html/d8/releases/20170427165444/sites/default/files ]
+ DEBUG [9fc64342] Finished in 0.023 seconds with exit status 1 (failed).
+ DEBUG [888c3129] Running [ -d /var/www/html/d8/releases/20170427165444/sites/default/files ] as vagrant@192.168.33.70
+ DEBUG [888c3129] Command: [ -d /var/www/html/d8/releases/20170427165444/sites/default/files ]
+ DEBUG [888c3129] Finished in 0.023 seconds with exit status 1 (failed).
+  INFO [3f299153] Running /usr/bin/env ln -s /var/www/html/d8/shared/sites/default/files /var/www/html/d8/releases/20170427165444/sites/default/files as vagrant@192.168.33.70
+ DEBUG [3f299153] Command: /usr/bin/env ln -s /var/www/html/d8/shared/sites/default/files /var/www/html/d8/releases/20170427165444/sites/default/files
+  INFO [3f299153] Finished in 0.024 seconds with exit status 0 (successful).
+  INFO [ea5a8941] Running /usr/bin/env ln -s /var/www/html/d8/releases/20170427165444 /var/www/html/d8/releases/current as vagrant@192.168.33.70
+ DEBUG [ea5a8941] Command: /usr/bin/env ln -s /var/www/html/d8/releases/20170427165444 /var/www/html/d8/releases/current
+  INFO [ea5a8941] Finished in 0.023 seconds with exit status 0 (successful).
+  INFO [19be2788] Running /usr/bin/env mv /var/www/html/d8/releases/current /var/www/html/d8 as vagrant@192.168.33.70
+ DEBUG [19be2788] Command: /usr/bin/env mv /var/www/html/d8/releases/current /var/www/html/d8
+  INFO [19be2788] Finished in 0.025 seconds with exit status 0 (successful).
+ DEBUG [c228d504] Running /usr/bin/env ls -x /var/www/html/d8/releases as vagrant@192.168.33.70
+ DEBUG [c228d504] Command: /usr/bin/env ls -x /var/www/html/d8/releases
+ DEBUG [c228d504] 	20170427150917	20170427165444
+ DEBUG [c228d504] Finished in 0.023 seconds with exit status 0 (successful).
+ DEBUG [9e66a965] Running if test ! -d /var/www/html/d8/releases; then echo "Directory does not exist '/var/www/html/d8/releases'" 1>&2; false; fi as vagrant@192.168.33.70
+ DEBUG [9e66a965] Command: if test ! -d /var/www/html/d8/releases; then echo "Directory does not exist '/var/www/html/d8/releases'" 1>&2; false; fi
+ DEBUG [9e66a965] Finished in 0.023 seconds with exit status 0 (successful).
+  INFO [ff9de7dc] Running /usr/bin/env echo "Branch master (at 421ce8251767180b228e61a70b121fcec9b9abca) deployed as release 20170427165444 by mlahmidi" >> /var/www/html/d8/revisions.log as vagrant@192.168.33.70
+ DEBUG [ff9de7dc] Command: cd /var/www/html/d8/releases && /usr/bin/env echo "Branch master (at 421ce8251767180b228e61a70b121fcec9b9abca) deployed as release 20170427165444 by mlahmidi" >> /var/www/html/d8/revisions.log
+  INFO [ff9de7dc] Finished in 0.014 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-27 19:03:47 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [55b6a510] Running /usr/bin/env mkdir -p /tmp as vagrant@192.168.33.70
+ DEBUG [55b6a510] Command: /usr/bin/env mkdir -p /tmp
+  INFO [55b6a510] Finished in 1.595 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-mon_site_d8-production-mlahmidi.sh 0.0%
+  INFO Uploading /tmp/git-ssh-mon_site_d8-production-mlahmidi.sh 100.0%
+  INFO [a94de520] Running /usr/bin/env chmod 700 /tmp/git-ssh-mon_site_d8-production-mlahmidi.sh as vagrant@192.168.33.70
+ DEBUG [a94de520] Command: /usr/bin/env chmod 700 /tmp/git-ssh-mon_site_d8-production-mlahmidi.sh
+  INFO [a94de520] Finished in 0.022 seconds with exit status 0 (successful).
+  INFO [7443827e] Running /usr/bin/env git ls-remote git@github.com:majidlahmidi/d8.git HEAD as vagrant@192.168.33.70
+ DEBUG [7443827e] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-mon_site_d8-production-mlahmidi.sh" ; /usr/bin/env git ls-remote git@github.com:majidlahmidi/d8.git HEAD )
+ DEBUG [7443827e] 	Error reading response length from authentication socket.
+ DEBUG [7443827e] 	ffe58d4f64e64c2c30c5efc0d0d48375da5a1b8d	HEAD
+  INFO [7443827e] Finished in 1.659 seconds with exit status 0 (successful).
+  INFO [602575ff] Running /usr/bin/env mkdir -p /var/www/html/d8/shared /var/www/html/d8/releases as vagrant@192.168.33.70
+ DEBUG [602575ff] Command: /usr/bin/env mkdir -p /var/www/html/d8/shared /var/www/html/d8/releases
+  INFO [602575ff] Finished in 0.022 seconds with exit status 0 (successful).
+  INFO [bde2d255] Running /usr/bin/env mkdir -p /var/www/html/d8/shared/sites/default/files as vagrant@192.168.33.70
+ DEBUG [bde2d255] Command: /usr/bin/env mkdir -p /var/www/html/d8/shared/sites/default/files
+  INFO [bde2d255] Finished in 0.023 seconds with exit status 0 (successful).
+  INFO [b1e42abe] Running /usr/bin/env mkdir -p /var/www/html/d8/shared/sites/default as vagrant@192.168.33.70
+ DEBUG [b1e42abe] Command: /usr/bin/env mkdir -p /var/www/html/d8/shared/sites/default
+  INFO [b1e42abe] Finished in 0.023 seconds with exit status 0 (successful).
+ DEBUG [489daf7a] Running [ -f /var/www/html/d8/shared/sites/default/settings.php ] as vagrant@192.168.33.70
+ DEBUG [489daf7a] Command: [ -f /var/www/html/d8/shared/sites/default/settings.php ]
+ DEBUG [489daf7a] Finished in 0.022 seconds with exit status 0 (successful).
+ DEBUG [805abab9] Running [ -f /var/www/html/d8/shared/sites/default/services.yml ] as vagrant@192.168.33.70
+ DEBUG [805abab9] Command: [ -f /var/www/html/d8/shared/sites/default/services.yml ]
+ DEBUG [805abab9] Finished in 0.023 seconds with exit status 0 (successful).
+ DEBUG [8a519dd5] Running [ -f /var/www/html/d8/current/REVISION ] as vagrant@192.168.33.70
+ DEBUG [8a519dd5] Command: [ -f /var/www/html/d8/current/REVISION ]
+ DEBUG [8a519dd5] Finished in 0.022 seconds with exit status 0 (successful).
+ DEBUG [7ed0b7c8] Running /usr/bin/env cat /var/www/html/d8/current/REVISION 2>/dev/null as vagrant@192.168.33.70
+ DEBUG [7ed0b7c8] Command: /usr/bin/env cat /var/www/html/d8/current/REVISION 2>/dev/null
+ DEBUG [7ed0b7c8] 	421ce8251767180b228e61a70b121fcec9b9abca
+ DEBUG [7ed0b7c8] Finished in 0.022 seconds with exit status 0 (successful).
+ DEBUG [ef1f3d65] Running [ -f /var/www/html/d8/repo/HEAD ] as vagrant@192.168.33.70
+ DEBUG [ef1f3d65] Command: [ -f /var/www/html/d8/repo/HEAD ]
+ DEBUG [ef1f3d65] Finished in 0.023 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/html/d8/repo
+ DEBUG [b16211cc] Running if test ! -d /var/www/html/d8/repo; then echo "Directory does not exist '/var/www/html/d8/repo'" 1>&2; false; fi as vagrant@192.168.33.70
+ DEBUG [b16211cc] Command: if test ! -d /var/www/html/d8/repo; then echo "Directory does not exist '/var/www/html/d8/repo'" 1>&2; false; fi
+ DEBUG [b16211cc] Finished in 0.023 seconds with exit status 0 (successful).
+  INFO [277a2add] Running /usr/bin/env git remote set-url origin git@github.com:majidlahmidi/d8.git as vagrant@192.168.33.70
+ DEBUG [277a2add] Command: cd /var/www/html/d8/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-mon_site_d8-production-mlahmidi.sh" ; /usr/bin/env git remote set-url origin git@github.com:majidlahmidi/d8.git )
+  INFO [277a2add] Finished in 0.022 seconds with exit status 0 (successful).
+  INFO [b5baa33f] Running /usr/bin/env git remote update --prune as vagrant@192.168.33.70
+ DEBUG [b5baa33f] Command: cd /var/www/html/d8/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-mon_site_d8-production-mlahmidi.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [b5baa33f] 	Fetching origin
+ DEBUG [b5baa33f] 	Error reading response length from authentication socket.
+ DEBUG [b5baa33f] 	From github.com:majidlahmidi/d8
+   421ce82..ffe58d4  master     -> master
+  INFO [b5baa33f] Finished in 1.682 seconds with exit status 0 (successful).
+ DEBUG [907175bb] Running if test ! -d /var/www/html/d8/repo; then echo "Directory does not exist '/var/www/html/d8/repo'" 1>&2; false; fi as vagrant@192.168.33.70
+ DEBUG [907175bb] Command: if test ! -d /var/www/html/d8/repo; then echo "Directory does not exist '/var/www/html/d8/repo'" 1>&2; false; fi
+ DEBUG [907175bb] Finished in 0.022 seconds with exit status 0 (successful).
+  INFO [22a0473a] Running /usr/bin/env mkdir -p /var/www/html/d8/releases/20170427170350 as vagrant@192.168.33.70
+ DEBUG [22a0473a] Command: cd /var/www/html/d8/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-mon_site_d8-production-mlahmidi.sh" ; /usr/bin/env mkdir -p /var/www/html/d8/releases/20170427170350 )
+  INFO [22a0473a] Finished in 0.023 seconds with exit status 0 (successful).
+  INFO [c27e7322] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/html/d8/releases/20170427170350 as vagrant@192.168.33.70
+ DEBUG [c27e7322] Command: cd /var/www/html/d8/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-mon_site_d8-production-mlahmidi.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/html/d8/releases/20170427170350 )
+  INFO [c27e7322] Finished in 1.290 seconds with exit status 0 (successful).
+ DEBUG [c1d4037e] Running if test ! -d /var/www/html/d8/repo; then echo "Directory does not exist '/var/www/html/d8/repo'" 1>&2; false; fi as vagrant@192.168.33.70
+ DEBUG [c1d4037e] Command: if test ! -d /var/www/html/d8/repo; then echo "Directory does not exist '/var/www/html/d8/repo'" 1>&2; false; fi
+ DEBUG [c1d4037e] Finished in 0.013 seconds with exit status 0 (successful).
+ DEBUG [9e4af18a] Running /usr/bin/env git rev-list --max-count=1 master as vagrant@192.168.33.70
+ DEBUG [9e4af18a] Command: cd /var/www/html/d8/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-mon_site_d8-production-mlahmidi.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [9e4af18a] 	ffe58d4f64e64c2c30c5efc0d0d48375da5a1b8d
+ DEBUG [9e4af18a] Finished in 0.023 seconds with exit status 0 (successful).
+ DEBUG [ae2fbdb1] Running if test ! -d /var/www/html/d8/releases/20170427170350; then echo "Directory does not exist '/var/www/html/d8/releases/20170427170350'" 1>&2; false; fi as vagrant@192.168.33.70
+ DEBUG [ae2fbdb1] Command: if test ! -d /var/www/html/d8/releases/20170427170350; then echo "Directory does not exist '/var/www/html/d8/releases/20170427170350'" 1>&2; false; fi
+ DEBUG [ae2fbdb1] Finished in 0.024 seconds with exit status 0 (successful).
+  INFO [d7b1afa7] Running /usr/bin/env echo "ffe58d4f64e64c2c30c5efc0d0d48375da5a1b8d" >> REVISION as vagrant@192.168.33.70
+ DEBUG [d7b1afa7] Command: cd /var/www/html/d8/releases/20170427170350 && /usr/bin/env echo "ffe58d4f64e64c2c30c5efc0d0d48375da5a1b8d" >> REVISION
+  INFO [d7b1afa7] Finished in 0.024 seconds with exit status 0 (successful).
+  INFO [d1190a52] Running /usr/bin/env mkdir -p /var/www/html/d8/releases/20170427170350/sites/default as vagrant@192.168.33.70
+ DEBUG [d1190a52] Command: /usr/bin/env mkdir -p /var/www/html/d8/releases/20170427170350/sites/default
+  INFO [d1190a52] Finished in 0.023 seconds with exit status 0 (successful).
+ DEBUG [9137143b] Running [ -L /var/www/html/d8/releases/20170427170350/sites/default/settings.php ] as vagrant@192.168.33.70
+ DEBUG [9137143b] Command: [ -L /var/www/html/d8/releases/20170427170350/sites/default/settings.php ]
+ DEBUG [9137143b] Finished in 0.022 seconds with exit status 1 (failed).
+ DEBUG [ed28743b] Running [ -f /var/www/html/d8/releases/20170427170350/sites/default/settings.php ] as vagrant@192.168.33.70
+ DEBUG [ed28743b] Command: [ -f /var/www/html/d8/releases/20170427170350/sites/default/settings.php ]
+ DEBUG [ed28743b] Finished in 0.024 seconds with exit status 1 (failed).
+  INFO [b77dceb4] Running /usr/bin/env ln -s /var/www/html/d8/shared/sites/default/settings.php /var/www/html/d8/releases/20170427170350/sites/default/settings.php as vagrant@192.168.33.70
+ DEBUG [b77dceb4] Command: /usr/bin/env ln -s /var/www/html/d8/shared/sites/default/settings.php /var/www/html/d8/releases/20170427170350/sites/default/settings.php
+  INFO [b77dceb4] Finished in 0.023 seconds with exit status 0 (successful).
+ DEBUG [6f42ddf4] Running [ -L /var/www/html/d8/releases/20170427170350/sites/default/services.yml ] as vagrant@192.168.33.70
+ DEBUG [6f42ddf4] Command: [ -L /var/www/html/d8/releases/20170427170350/sites/default/services.yml ]
+ DEBUG [6f42ddf4] Finished in 0.022 seconds with exit status 1 (failed).
+ DEBUG [156fd14b] Running [ -f /var/www/html/d8/releases/20170427170350/sites/default/services.yml ] as vagrant@192.168.33.70
+ DEBUG [156fd14b] Command: [ -f /var/www/html/d8/releases/20170427170350/sites/default/services.yml ]
+ DEBUG [156fd14b] Finished in 0.023 seconds with exit status 1 (failed).
+  INFO [ccbd9d5e] Running /usr/bin/env ln -s /var/www/html/d8/shared/sites/default/services.yml /var/www/html/d8/releases/20170427170350/sites/default/services.yml as vagrant@192.168.33.70
+ DEBUG [ccbd9d5e] Command: /usr/bin/env ln -s /var/www/html/d8/shared/sites/default/services.yml /var/www/html/d8/releases/20170427170350/sites/default/services.yml
+  INFO [ccbd9d5e] Finished in 0.023 seconds with exit status 0 (successful).
+  INFO [f5f6778f] Running /usr/bin/env mkdir -p /var/www/html/d8/releases/20170427170350/sites/default as vagrant@192.168.33.70
+ DEBUG [f5f6778f] Command: /usr/bin/env mkdir -p /var/www/html/d8/releases/20170427170350/sites/default
+  INFO [f5f6778f] Finished in 0.022 seconds with exit status 0 (successful).
+ DEBUG [f976c90a] Running [ -L /var/www/html/d8/releases/20170427170350/sites/default/files ] as vagrant@192.168.33.70
+ DEBUG [f976c90a] Command: [ -L /var/www/html/d8/releases/20170427170350/sites/default/files ]
+ DEBUG [f976c90a] Finished in 0.014 seconds with exit status 1 (failed).
+ DEBUG [224b4ba8] Running [ -d /var/www/html/d8/releases/20170427170350/sites/default/files ] as vagrant@192.168.33.70
+ DEBUG [224b4ba8] Command: [ -d /var/www/html/d8/releases/20170427170350/sites/default/files ]
+ DEBUG [224b4ba8] Finished in 0.023 seconds with exit status 1 (failed).
+  INFO [d612c133] Running /usr/bin/env ln -s /var/www/html/d8/shared/sites/default/files /var/www/html/d8/releases/20170427170350/sites/default/files as vagrant@192.168.33.70
+ DEBUG [d612c133] Command: /usr/bin/env ln -s /var/www/html/d8/shared/sites/default/files /var/www/html/d8/releases/20170427170350/sites/default/files
+  INFO [d612c133] Finished in 0.023 seconds with exit status 0 (successful).
+  INFO [a5aa0656] Running /usr/bin/env ln -s /var/www/html/d8/releases/20170427170350 /var/www/html/d8/releases/current as vagrant@192.168.33.70
+ DEBUG [a5aa0656] Command: /usr/bin/env ln -s /var/www/html/d8/releases/20170427170350 /var/www/html/d8/releases/current
+  INFO [a5aa0656] Finished in 0.023 seconds with exit status 0 (successful).
+  INFO [25d596ca] Running /usr/bin/env mv /var/www/html/d8/releases/current /var/www/html/d8 as vagrant@192.168.33.70
+ DEBUG [25d596ca] Command: /usr/bin/env mv /var/www/html/d8/releases/current /var/www/html/d8
+  INFO [25d596ca] Finished in 0.022 seconds with exit status 0 (successful).
+ DEBUG [ee6d4b38] Running /usr/bin/env ls -x /var/www/html/d8/releases as vagrant@192.168.33.70
+ DEBUG [ee6d4b38] Command: /usr/bin/env ls -x /var/www/html/d8/releases
+ DEBUG [ee6d4b38] 	20170427150917	20170427165444	20170427170350
+ DEBUG [ee6d4b38] Finished in 0.024 seconds with exit status 0 (successful).
+ DEBUG [df1fed19] Running if test ! -d /var/www/html/d8/releases; then echo "Directory does not exist '/var/www/html/d8/releases'" 1>&2; false; fi as vagrant@192.168.33.70
+ DEBUG [df1fed19] Command: if test ! -d /var/www/html/d8/releases; then echo "Directory does not exist '/var/www/html/d8/releases'" 1>&2; false; fi
+ DEBUG [df1fed19] Finished in 0.023 seconds with exit status 0 (successful).
+  INFO [e9ea4b09] Running /usr/bin/env echo "Branch master (at ffe58d4f64e64c2c30c5efc0d0d48375da5a1b8d) deployed as release 20170427170350 by mlahmidi" >> /var/www/html/d8/revisions.log as vagrant@192.168.33.70
+ DEBUG [e9ea4b09] Command: cd /var/www/html/d8/releases && /usr/bin/env echo "Branch master (at ffe58d4f64e64c2c30c5efc0d0d48375da5a1b8d) deployed as release 20170427170350 by mlahmidi" >> /var/www/html/d8/revisions.log
+  INFO [e9ea4b09] Finished in 0.024 seconds with exit status 0 (successful).
