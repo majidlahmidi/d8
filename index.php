@@ -13,8 +13,6 @@ use Symfony\Component\HttpFoundation\Request;
 
 $autoloader = require_once 'autoload.php';
 
-die();
-
 $kernel = new DrupalKernel('prod', $autoloader);
 
 $request = Request::createFromGlobals();
